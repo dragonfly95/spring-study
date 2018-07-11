@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configure>
+    <New id="DSTest" class="org.eclipse.jetty.plus.jndi.Resource">
+        <Arg></Arg>
+        <Arg>jdbc/orcl</Arg>
+        <Arg>
+            <New class="org.apache.commons.dbcp2.BasicDataSource">
+                <Set name="driverClassName">oracle.jdbc.driver.OracleDriver</Set>
+                <Set name="url">jdbc:oracle:thin:@localhost:test</Set>
+                <Set name="username">root</Set>
+                <Set name="password">1234</Set>
+            </New>
+        </Arg>
+    </New>
+</Configure>
