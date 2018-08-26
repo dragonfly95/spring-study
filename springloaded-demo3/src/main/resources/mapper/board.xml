@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.company.mapper.BoardMapper">
+
+    <select id="boardCount" resultType="int">
+        select count(*) from board
+  </select>
+
+
+    <select id="getlist" resultType="com.company.demo3.BoardVO">
+     select *
+     from board
+  </select>
+
+    <select id="doDetail" resultType="com.company.demo3.BoardVO">
+        select *
+        from board
+        where id = #{id}
+    </select>
+
+
+    <insert id="doWrite" parameterType="com.company.demo3.BoardVO">
+
+       <selectKey keyColumn="id" resultType="int" order="BEFORE">
+           select max(id) + 1 from board
+       </selectKey>
+
+        insert into board (id, content, subject)
+        values (#{id} , #{content} , #{subject})
+    </insert>
+
+    <update id="upDate" parameterType="com.company.demo3.BoardVO">
+        update board set subject = #{subject}, content = #{content}
+        where id = #{id}
+    </update>
+
+    <delete id="deleteDo" parameterType="int">
+        delete  from board where id = #{id}
+    </delete>
+</mapper>
+
+
+
