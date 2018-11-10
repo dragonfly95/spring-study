@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+  <configuration>
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+
+  	<typeAliases>
+  		<typeAlias type="com.ktds.youtube.video.vo.SiteVO" alias="siteVO"/>
+			<typeAlias type="com.ktds.youtube.video.vo.ItemVO" alias="itemVO"/>
+
+			<typeAlias type="com.ktds.youtube.video.vo.BoardDto" alias="boardDto"/>
+			<typeAlias type="com.ktds.youtube.video.vo.FileDto" alias="fileDto"/>
+			<typeAlias type="com.ktds.youtube.video.vo.MemberDto" alias="memberDto"/>
+			<typeAlias type="com.ktds.youtube.video.vo.ReplyDto" alias="replyDto"/>
+		</typeAliases>
+
+  </configuration>

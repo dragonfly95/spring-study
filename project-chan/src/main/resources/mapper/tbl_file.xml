@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ktds.youtube.video.mapper.FileMapper">
+
+  <select id="findOne" parameterType="int" resultType="fileDto">
+    SELECT
+    file_no, /*파일번호*/
+    file_nm, /*파일명*/
+    path, /*파일위치*/
+    board_no, /*게시판번호*/
+    COALESCE(mod_dt, reg_dt) AS reg_dt /*생성일*/
+    FROM file
+    WHERE del_yn = 'N'
+    AND board_no = #{boardNo}
+    ORDER BY mod_dt, reg_dt DESC, file_nm ASC
+  </select>
+
+  <insert id="insert" parameterType="fileDto">
+    INSERT INTO file (
+    file_nm, /*파일명*/
+    path, /*파일위치*/
+    board_no, /*게시판번호*/
+    reg_dt /*생성일*/
+    ) values (
+    #{fileNm}, /*파일명*/
+    #{path}, /*파일위치*/
+    #{boardNo}, /*게시판번호*/
+    NOW() /*생성일*/
+    )
+  </insert>
+
+  <update id="update" parameterType="fileDto">
+    UPDATE file SET
+    file_nm = #{fileNm}, /*파일명*/
+    path = #{path}, /*파일위치*/
+    mod_dt = now() /*수정일*/
+    WHERE board_no = #{boardNo} /*게시판번호*/
+  </update>
+
+  <delete id="delete" parameterType="fileDto">
+    UPDATE file SET
+    del_yn = 'Y', /*삭제여부*/
+    mod_dt = now() /*수정일*/
+    WHERE board_no = #{boardNo} /*게시판번호*/
+    AND file_no = #{fileNo} /*파일 번호*/
+  </delete>
+
+
+  <delete id="deleteAll" parameterType="int">
+    UPDATE file SET
+    del_yn = 'Y', /*삭제여부*/
+    mod_dt = now() /*수정일*/
+    WHERE board_no = #{boardNo} /*게시판번호*/
+  </delete>
+
+</mapper>

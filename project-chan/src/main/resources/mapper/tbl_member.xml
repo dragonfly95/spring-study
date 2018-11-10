@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ktds.youtube.video.mapper.MemberMapper">
+
+  <select id="findAll" resultType="memberDto">
+    SELECT
+    member_no, /*회원번호*/
+    member_id, /*회원ID*/
+    member_pwd, /*회원Password*/
+    member_nm, /*회원명*/
+    COALESCE(mod_dt, reg_dt) as reg_dt /*생성일*/
+    FROM member
+  </select>
+
+  <select id="findOne" parameterType="int" resultType="memberDto">
+    SELECT
+    member_no, /*회원번호*/
+    member_id, /*회원ID*/
+    member_pwd, /*회원Password*/
+    member_nm, /*회원명*/
+    COALESCE(mod_dt, reg_dt) as reg_dt /*생성일*/
+    FROM member
+    WHERE del_yn = 'N' /*삭제여부*/
+    AND member_no = #{memberNo} /*회원번호*/
+  </select>
+
+  <insert id="insert" parameterType="memberDto">
+    INSERT INTO member (
+    #{member_no},
+    #{member_id}, /*회원ID*/
+    #{member_pwd}, /*회원Password*/
+    #{member_nm}, /*회원명*/
+    #{reg_dt} /*생성일*/
+    ) values (
+    #{memberNo},
+    #{memberId},  /*회원ID*/
+    #{memberPwd}, /*회원Password*/
+    #{memberNm},  /*회원명*/
+    now()          /*생성일*/
+    )
+  </insert>
+
+  <update id="update" parameterType="memberDto">
+    UPDATE member SET
+    member_pwd = #{memberPwd}, /*회원Password*/
+    member_nm = #{memberNm},   /*회원명*/
+    mod_dt = now()               /*수정일*/
+    WHERE member_no = #{memberNo}   /*회원번호*/
+  </update>
+
+  <delete id="delete" parameterType="int">
+    UPDATE member SET
+    del_yn = 'Y', /*삭제여부*/
+    mod_dt = now() /*수정일*/
+    WHERE member_no = #{memberNo} /*회원번호*/
+  </delete>
+
+</mapper>

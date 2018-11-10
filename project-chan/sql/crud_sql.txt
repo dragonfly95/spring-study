@@ -1,0 +1,183 @@
+------------------------------------------게시물 정보-------------------------------------------------
+--게시물 목록 조회
+SELECT 
+    board_no, /*게시판번호*/
+    title, /*제목*/
+    content, /*내용*/
+    writer, /*작성자 번호*/
+    COALESCE((SELECT member_nm FROM member where member_no = writer), '') as writer_nm, /*작성자명*/
+    COALESCE((SELECT file_nm FROM file where board_no = board_no), '') as file_nm, /*파일명*/
+    COALESCE(mod_dt, reg_dt) AS reg_dt /*생성일*/
+FROM board
+WHERE del_yn = 'N'
+ORDER BY reg_dt DESC;
+
+--게시물 상세 조회
+SELECT 
+    board_no, /*게시판번호*/
+    title, /*제목*/
+    content, /*내용*/
+    writer, /*작성자 번호*/
+    COALESCE((SELECT member_nm FROM member where member_no = writer), '') as writer_nm, /*작성자명*/
+    COALESCE(mod_dt, reg_dt) AS reg_dt /*생성일*/
+FROM board
+WHERE del_yn = 'N'
+AND board_no = '1'
+
+--게시물 등록
+INSERT INTO board (
+    title, /*제목*/
+    content, /*내용*/
+    writer, /*작성자 번호*/
+    reg_dt /*생성일*/
+) values (
+    '게시물 제목 TEST', /*제목*/
+    '게시물 내용 TEST', /*내용*/
+    '1', /*작성자 번호*/
+    NOW() /*생성일*/
+);
+
+--게시물 수정
+UPDATE board SET
+    title = '게시물 제목 TEST1', /*제목*/
+    content = '게시물 내용 TEST1', /*내용*/
+    mod_dt = now() /*수정일*/
+WHERE board_no = '1' /*게시판번호*/
+
+--게시물 삭제
+UPDATE board SET
+    del_yn = 'Y', /*삭제여부*/
+    mod_dt = now() /*수정일*/
+WHERE board_no = '1' /*게시판번호*/
+
+------------------------------------------파일 정보-------------------------------------------------
+
+--게시물별 파일 목록 조회
+SELECT 
+    file_no, /*파일번호*/
+    file_nm, /*파일명*/
+    path, /*파일위치*/
+    board_no, /*게시판번호*/
+    COALESCE(mod_dt, reg_dt) AS reg_dt /*생성일*/
+FROM file
+WHERE del_yn = 'N'
+AND board_no = '1'
+ORDER BY mod_dt, reg_dt DESC, file_nm ASC
+
+--파일 등록
+INSERT INTO file (
+    file_nm, /*파일명*/
+    path, /*파일위치*/
+    board_no, /*게시판번호*/
+    reg_dt /*생성일*/
+) values (
+    'file name', /*파일명*/
+    'file path', /*파일위치*/
+    '1', /*게시판번호*/
+    NOW() /*생성일*/
+)
+
+--파일 수정
+UPDATE file SET
+    file_nm = 'file name1', /*파일명*/
+    path = 'file path1', /*파일위치*/
+    mod_dt = now() /*수정일*/
+WHERE board_no = '1' /*게시판번호*/
+
+--게시물별 파일 전체 삭제
+UPDATE file SET
+    del_yn = 'Y', /*삭제여부*/
+    mod_dt = now() /*수정일*/
+WHERE board_no = '1' /*게시판번호*/
+
+-- 파일 상세 삭제
+UPDATE file SET
+    del_yn = 'Y', /*삭제여부*/
+    mod_dt = now() /*수정일*/
+WHERE board_no = '1' /*게시판번호*/
+AND file_no = '1' /*파일 번호*/
+------------------------------------------회원 정보-------------------------------------------------
+
+--회원 정보 조회
+SELECT
+    member_no, /*회원번호*/
+    member_id, /*회원ID*/
+    member_pwd, /*회원Password*/
+    member_nm, /*회원명*/
+    COALESCE(mod_dt, reg_dt) as reg_dt /*생성일*/
+FROM member
+WHERE del_yn = 'N' /*삭제여부*/
+AND member_no = '1' /*회원번호*/
+
+--회원 정보 등록
+INSERT INTO member (
+    member_id, /*회원ID*/
+    member_pwd, /*회원Password*/
+    member_nm, /*회원명*/
+    reg_dt /*생성일*/
+) values (
+    'yun', /*회원ID*/
+    '1234', /*회원Password*/
+    '윤', /*회원명*/
+    now() /*생성일*/
+)
+
+--회원 정보 수정
+UPDATE member SET
+    member_pwd = '12345', /*회원Password*/
+    member_nm = '윤1', /*회원명*/
+    mod_dt = now() /*수정일*/
+WHERE member_no = '1' /*회원번호*/
+
+--회원 정보 삭제
+UPDATE member SET
+    del_yn = 'Y', /*삭제여부*/
+    mod_dt = now() /*수정일*/
+WHERE member_no = '1' /*회원번호*/
+
+------------------------------------------댓글 정보-------------------------------------------------
+--게시물별 댓글 목록 조회
+SELECT 
+    reply_no, /*댓글번호*/
+    content, /*댓글내용*/
+    writer, /*작성자 번호*/
+    board_no, /*게시판번호*/
+    COALESCE((SELECT member_nm FROM member where member_no = writer), '') as writer_nm, /*작성자명*/
+    COALESCE(mod_dt, reg_dt) AS reg_dt /*생성일*/
+FROM reply
+WHERE del_yn = 'N'
+AND board_no = '1'
+ORDER BY reg_dt DESC
+
+--댓글 등록
+INSERT INTO reply (
+    content, /*댓글내용*/
+    writer, /*작성자*/
+    board_no, /*게시판번호*/
+    reg_dt /*생성일*/
+) values (
+    '댓글 내용 TEST', /*댓글내용*/
+    '1', /*작성자*/
+    '1', /*게시판번호*/
+    NOW() /*생성일*/
+)
+
+--댓글 수정
+UPDATE reply SET
+    content = '댓글 내용 TEST1', /*댓글내용*/
+    mod_dt = now() /*수정일*/
+WHERE board_no = '1' /*게시판번호*/
+AND reply_no = '1'
+
+--게시물별 댓글 전체 삭제
+UPDATE reply SET
+    del_yn = 'Y', /*삭제여부*/
+    mod_dt = now() /*수정일*/
+WHERE board_no = '1' /*게시판번호*/
+
+--댓글 상세 삭제
+UPDATE reply SET
+    del_yn = 'Y', /*삭제여부*/
+    mod_dt = now() /*수정일*/
+WHERE board_no = '1' /*게시판번호*/
+AND reply_no = '1' /*댓글번호*/

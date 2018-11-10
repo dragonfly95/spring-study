@@ -1,0 +1,49 @@
+create database lesson;
+
+CREATE TABLE `board` (
+    `board_no`      int NOT NULL AUTO_INCREMENT COMMENT '게시판번호',
+    `title`         varchar(100) NOT NULL COMMENT '제목',
+    `content`       text NULL COMMENT '내용',
+    `writer`        int NOT NULL COMMENT '작성자',
+    `del_yn`        char(1) DEFAULT 'N' COMMENT '삭제여부',
+    `reg_dt`        datetime NOT NULL COMMENT '생성일',
+    `mod_dt`        datetime NULL COMMENT '수정일',
+    PRIMARY KEY (`board_no`)
+)
+COMMENT '게시판 정보';
+
+CREATE TABLE `member` (
+    `member_no`     int NOT NULL AUTO_INCREMENT COMMENT '회원번호',
+    `member_id`     varchar(100) NOT NULL COMMENT '회원ID',
+    `member_pwd`    varchar(100) NOT NULL COMMENT '회원Password',
+    `member_nm`     varchar(100) NOT NULL COMMENT '회원명',
+    `del_yn`        char(1) DEFAULT 'N' COMMENT '탈퇴여부',
+    `reg_dt`        datetime NOT NULL COMMENT '생성일',
+    `mod_dt`        datetime NULL COMMENT '수정일',
+    PRIMARY KEY (`member_no`)
+)
+COMMENT '회원 정보';
+
+CREATE TABLE `file` (
+    `file_no`       int NOT NULL AUTO_INCREMENT COMMENT '파일번호',
+    `file_nm`       varchar(100) NOT NULL COMMENT '파일명',
+    `path`          varchar(100) NOT NULL COMMENT '파일경로',
+    `board_no`      int NOT NULL COMMENT '게시판번호',
+    `del_yn`        char(1) DEFAULT 'N' COMMENT '삭제여부',
+    `reg_dt`        datetime NOT NULL COMMENT '생성일',
+    `mod_dt`        datetime NULL COMMENT '수정일',
+    PRIMARY KEY (`file_no`)
+)
+COMMENT '파일 정보';
+
+CREATE TABLE `reply` (
+    `reply_no`      int NOT NULL AUTO_INCREMENT COMMENT '댓글번호',
+    `content`       varchar(300) NOT NULL COMMENT '댓글내용',
+    `writer`        int NOT NULL COMMENT '작성자',
+    `board_no`      int NOT NULL COMMENT '게시판번호',
+    `del_yn`        char(1) DEFAULT 'N' COMMENT '삭제여부',
+    `reg_dt`        datetime NOT NULL COMMENT '생성일',
+    `mod_dt`        datetime NULL COMMENT '수정일',
+    PRIMARY KEY (`reply_no`)
+)
+COMMENT '댓글 정보';

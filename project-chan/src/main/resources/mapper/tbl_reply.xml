@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ktds.youtube.video.mapper.ReplyMapper">
+
+  <select id="findAll" parameterType="int" resultType="replyDto">
+    SELECT
+      reply_no, /*댓글번호*/
+      content, /*댓글내용*/
+      writer, /*작성자 번호*/
+      board_no, /*게시판번호*/
+      COALESCE((SELECT member_nm FROM member where member_no = writer), '') as writer_nm, /*작성자명*/
+      COALESCE(mod_dt, reg_dt) AS reg_dt /*생성일*/
+    FROM reply
+    WHERE del_yn = 'N'
+    AND board_no = #{boardNo}
+    ORDER BY reg_dt DESC
+  </select>
+
+  <insert id="insert" parameterType="replyDto">
+    INSERT INTO reply (
+      content, /*댓글내용*/
+      writer, /*작성자*/
+      board_no, /*게시판번호*/
+      reg_dt /*생성일*/
+    ) values (
+      #{content}, /*댓글내용*/
+      #{writer}, /*작성자*/
+      #{boardNo}, /*게시판번호*/
+      NOW() /*생성일*/
+    )
+  </insert>
+
+  <update id="update" parameterType="replyDto">
+    UPDATE reply SET
+    content = #{content}, /*댓글내용*/
+    mod_dt = now() /*수정일*/
+    WHERE board_no = #{boardNo} /*게시판번호*/
+    AND reply_no = #{replyNo}
+  </update>
+
+  <delete id="delete" parameterType="replyDto">
+    UPDATE reply SET
+    del_yn = 'Y', /*삭제여부*/
+    mod_dt = now() /*수정일*/
+    WHERE board_no = #{boardNo} /*게시판번호*/
+    AND reply_no = #{replyNo} /*댓글번호*/
+  </delete>
+
+  <delete id="deleteAll" parameterType="int">
+    UPDATE reply SET
+    del_yn = 'Y', /*삭제여부*/
+    mod_dt = now() /*수정일*/
+    WHERE board_no = #{boardNo} /*게시판번호*/
+  </delete>
+</mapper>
