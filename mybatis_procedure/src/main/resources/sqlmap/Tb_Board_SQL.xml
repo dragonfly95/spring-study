@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+          PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+          "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tistory.pentode.service.dao.BoardDAO">
+
+	<resultMap id="procVO" type="com.tistory.pentode.vo.BoardVO">
+		<result property="num" column="NUM"/>
+		<result property="name" column="NAME"/>
+		<result property="title" column="TITLE"/>
+		<result property="content" column="CONTENT"/>
+		<result property="readCount" column="READ_COUNT"/>
+		<result property="writeDate" column="WRITE_DATE"/>
+	</resultMap>
+	
+	<resultMap id="boardMap" type="hashmap" />
+	
+	<select id="selectBoardList" resultType="boardVO">
+		SELECT NUM
+		     , NAME
+		     , TITLE
+		     , CONTENT
+		     , READ_COUNT
+		     , WRITE_DATE
+	      FROM TB_BOARD
+	  ORDER BY NUM DESC
+	</select>
+
+	<select id="mapProcedureList" statementType="CALLABLE" parameterType="hashmap">
+		{ CALL test_proc(
+		          #{num}, 
+		          #{name, mode=INOUT, jdbcType=VARCHAR, javaType=String}, 
+		          #{resultList, mode=OUT, jdbcType=CURSOR, javaType=ResultSet, resultMap=boardMap}) 
+		}
+	</select>
+
+	<select id="procedureList" statementType="CALLABLE" parameterType="transferVO">
+		{ CALL test_proc(
+		          #{num}, 
+		          #{name, mode=INOUT, jdbcType=VARCHAR, javaType=String}, 
+		          #{resultList, mode=OUT, jdbcType=CURSOR, javaType=ResultSet, resultMap=procVO}) 
+		}
+	</select>
+	
+	<select id="anonymousBlockList" statementType="CALLABLE" parameterType="transferVO">
+		{ CALL
+			DECLARE
+				p_num  INT;
+				p_name VARCHAR2(20);
+				p_rc   SYS_REFCURSOR;
+			BEGIN
+				p_num  := #{num};
+				p_name := #{name};
+				
+				OPEN p_rc FOR
+                    SELECT NUM, NAME, TITLE, CONTENT, READ_COUNT, WRITE_DATE
+                      FROM TB_BOARD
+                     WHERE NUM >= p_num
+                       AND NAME = p_name
+                  ORDER BY NUM DESC;
+                  
+                #{resultList, mode=OUT, jdbcType=CURSOR, javaType=ResultSet, resultMap=procVO} := p_rc;
+                
+                #{name, mode=OUT, jdbcType=VARCHAR, javaType=String} := 'call anonymous block....';
+			END
+		}
+	</select>
+
+</mapper>
