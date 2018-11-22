@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.1.final using JasperReports Library version 6.2.1  -->
+<!-- 2017-01-16T16:04:31 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="test" pageWidth="576" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="576" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d8a60d63-3db5-48ca-b1b0-6b3bc6c73c29">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="rankMap" class="java.util.HashMap">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="rankMap2" class="java.util.HashMap">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="jun" class="ubs.shop.domain.Result"/>
+	<parameter name="top2_score" class="ubs.shop.domain.ScoreDetail"/>
+	<parameter name="top1_score" class="ubs.shop.domain.ScoreDetail"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="frank" class="java.lang.Integer">
+		<fieldDescription><![CDATA[frank]]></fieldDescription>
+	</field>
+	<field name="fsocre" class="java.lang.Double">
+		<fieldDescription><![CDATA[fsocre]]></fieldDescription>
+	</field>
+	<field name="fchangedt" class="java.lang.String">
+		<fieldDescription><![CDATA[fchangedt]]></fieldDescription>
+	</field>
+	<field name="fviewnm" class="java.lang.String">
+		<fieldDescription><![CDATA[fviewnm]]></fieldDescription>
+	</field>
+	<field name="fchildnm" class="java.lang.String">
+		<fieldDescription><![CDATA[fchildnm]]></fieldDescription>
+	</field>
+	<field name="ftdidx" class="java.lang.String">
+		<fieldDescription><![CDATA[ftdidx]]></fieldDescription>
+	</field>
+	<field name="fbannm" class="java.lang.String">
+		<fieldDescription><![CDATA[fbannm]]></fieldDescription>
+	</field>
+	<field name="fchecklistidx" class="java.lang.String">
+		<fieldDescription><![CDATA[fchecklistidx]]></fieldDescription>
+	</field>
+	<field name="fquestion" class="java.lang.String">
+		<fieldDescription><![CDATA[fquestion]]></fieldDescription>
+	</field>
+	<field name="fteachernm" class="java.lang.String">
+		<fieldDescription><![CDATA[fteachernm]]></fieldDescription>
+	</field>
+	<field name="fregid" class="java.lang.String">
+		<fieldDescription><![CDATA[fregid]]></fieldDescription>
+	</field>
+	<field name="fscorenm" class="java.lang.String">
+		<fieldDescription><![CDATA[fscorenm]]></fieldDescription>
+	</field>
+	<field name="fchecklist" class="java.lang.String">
+		<fieldDescription><![CDATA[fchecklist]]></fieldDescription>
+	</field>
+	<field name="fchangeid" class="java.lang.String">
+		<fieldDescription><![CDATA[fchangeid]]></fieldDescription>
+	</field>
+	<field name="ftaidx" class="java.lang.String">
+		<fieldDescription><![CDATA[ftaidx]]></fieldDescription>
+	</field>
+	<field name="fresultidx" class="java.lang.String">
+		<fieldDescription><![CDATA[fresultidx]]></fieldDescription>
+	</field>
+	<field name="ftcidx" class="java.lang.String">
+		<fieldDescription><![CDATA[ftcidx]]></fieldDescription>
+	</field>
+	<field name="fviewidx" class="java.lang.String">
+		<fieldDescription><![CDATA[fviewidx]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="farrayidx" class="java.lang.String">
+		<fieldDescription><![CDATA[farrayidx]]></fieldDescription>
+	</field>
+	<field name="fsecretcode" class="java.lang.String">
+		<fieldDescription><![CDATA[fsecretcode]]></fieldDescription>
+	</field>
+	<field name="fteidx" class="java.lang.String">
+		<fieldDescription><![CDATA[fteidx]]></fieldDescription>
+	</field>
+	<field name="chkidxs" class="java.util.List">
+		<fieldDescription><![CDATA[chkidxs]]></fieldDescription>
+	</field>
+	<field name="farray" class="java.lang.String">
+		<fieldDescription><![CDATA[farray]]></fieldDescription>
+	</field>
+	<field name="fchildidx" class="java.lang.String">
+		<fieldDescription><![CDATA[fchildidx]]></fieldDescription>
+	</field>
+	<field name="forganizationidx" class="java.lang.String">
+		<fieldDescription><![CDATA[forganizationidx]]></fieldDescription>
+	</field>
+	<field name="fdtfm" class="java.lang.String">
+		<fieldDescription><![CDATA[fdtfm]]></fieldDescription>
+	</field>
+	<field name="feducationidx" class="java.lang.String">
+		<fieldDescription><![CDATA[feducationidx]]></fieldDescription>
+	</field>
+	<field name="forganizationnm" class="java.lang.String">
+		<fieldDescription><![CDATA[forganizationnm]]></fieldDescription>
+	</field>
+	<field name="fbanidx" class="java.lang.String">
+		<fieldDescription><![CDATA[fbanidx]]></fieldDescription>
+	</field>
+	<field name="ftbidx" class="java.lang.String">
+		<fieldDescription><![CDATA[ftbidx]]></fieldDescription>
+	</field>
+	<field name="feducationnm" class="java.lang.String">
+		<fieldDescription><![CDATA[feducationnm]]></fieldDescription>
+	</field>
+	<field name="fregdt" class="java.lang.String">
+		<fieldDescription><![CDATA[fregdt]]></fieldDescription>
+	</field>
+	<field name="ftotal" class="java.lang.String">
+		<fieldDescription><![CDATA[ftotal]]></fieldDescription>
+	</field>
+	<field name="ftotalcount" class="java.lang.String">
+		<fieldDescription><![CDATA[ftotalcount]]></fieldDescription>
+	</field>
+	<field name="fteacheridx" class="java.lang.String">
+		<fieldDescription><![CDATA[fteacheridx]]></fieldDescription>
+	</field>
+	<field name="fdtto" class="java.lang.String">
+		<fieldDescription><![CDATA[fdtto]]></fieldDescription>
+	</field>
+	<field name="fchangestate" class="java.lang.String">
+		<fieldDescription><![CDATA[fchangestate]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" mode="Opaque" x="63" y="80" width="450" height="50" forecolor="#FFF200" backcolor="#248504" uuid="37176208-681d-479f-999f-01aca1d4860e"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[[다중지능 프로파일 분석 결과]]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="63" y="130" width="57" height="40" forecolor="#FFFFFF" backcolor="#51BA3C" uuid="49355037-dfd3-4cd6-8e6e-97e235e42f71"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[유형
+(type)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="120" y="130" width="108" height="40" forecolor="#FFFFFF" backcolor="#51BA3C" uuid="cfe0db86-e667-4221-b7ea-8f9064f80907"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[지능]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="228" y="130" width="170" height="40" forecolor="#FFFFFF" backcolor="#51BA3C" uuid="5898a6f9-e32f-4502-97d5-11262ab39c64"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[하위영역]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="466" y="130" width="47" height="40" forecolor="#FFFFFF" backcolor="#51BA3C" uuid="a3441009-bdd8-4c39-8068-6613cab91c27"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[참여도(Participation)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="398" y="130" width="68" height="40" forecolor="#FFFFFF" backcolor="#51BA3C" uuid="b627ad4e-f6f6-4fb1-b531-e0cc4380046a"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[발달단계
+(Progress)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="170" width="57" height="100" uuid="cad92636-9445-4280-ac6d-097fd2c4f718"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<text><![CDATA[계열지능]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="270" width="57" height="200" uuid="388182b3-58f4-4d52-b270-ecbc9999e31e"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<text><![CDATA[영역별지능
+
+
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="470" width="57" height="100" uuid="7ecbaa64-aece-4cab-ad51-670c955da2e6">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<text><![CDATA[관계지능]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="170" width="108" height="50" uuid="82f08bf7-0999-4fe4-bebb-689eddf69780">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[언어지능
+(Linguistic Intelligence)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="220" width="108" height="50" uuid="613e8477-3516-4eaa-8e9a-05f7f3095fa1"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[논리수학지능
+(Logical-Mathematical Intelligence)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="470" width="108" height="50" uuid="bac04ff9-b246-40de-b26e-a189f7c68b18"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[인간친화지능
+(Interpersonal Intelligence)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="520" width="108" height="50" uuid="a3d988fe-30be-479b-9530-de78f5ea5eec"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[자기이해지능
+(Intrapersonal Intelligence)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="320" width="108" height="50" uuid="95ad2f60-e1b6-41d7-9dac-278e7354f28e"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[공간지능
+(Spatial Intelligence)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="270" width="108" height="50" uuid="5e303364-d986-4503-83b3-7d370f67e91a"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[신체운동지능
+(Bodily-Kinesthetic Intelligence)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="370" width="108" height="50" uuid="9751d6fb-b03b-43f4-8961-06db2d316616"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[음악지능
+(Musical Intelligence)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="420" width="108" height="50" uuid="ece14d97-1181-47c5-bed0-869c5fa4cc60"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[자연친화지능
+(Naturalist Intelligence)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="170" width="170" height="50" uuid="a989d38a-c78a-4047-ad95-1dd4c6309961"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[말하기 / 읽기 / 쓰기 / 듣기]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="220" width="170" height="50" uuid="f2c6817b-56bd-42bb-8d53-57b75d03238d"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[수계산 / 논리적 사고 / 인과관계 인식]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="270" width="170" height="50" uuid="8ee27f72-1a22-45ff-bf02-2a98d93e7e19">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[운동 / 신체 작업 / 신체 동작]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="320" width="170" height="50" uuid="83e5826b-5433-47a7-9e8c-a4fc25786430"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[공간 요소 / 평면 요소 / 입체 요소]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="370" width="170" height="50" uuid="103530d3-335e-4cc1-aefb-b709ae9d3706"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[부르기 / 연주 / 작곡 / 감상]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="420" width="170" height="50" uuid="e1c15b1c-3275-4f02-ae84-400c27e4fc2c"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[동식물 인식 / 특징과 분류 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="470" width="170" height="50" uuid="9636d15d-2c9b-4974-beae-3d5e093b39c7"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[개인 특성 인식 / 집단 특성 인식]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="520" width="170" height="50" uuid="83b454a5-aee5-4e7f-a30f-d50796438e13"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[감정 인식 / 능력 인식 / 미래 계획]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="170" width="68" height="50" uuid="19e8b70e-d4ed-4a3b-99f1-351989dc2e94"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{rankMap2}.get("언어지능").equals("0") || $P{rankMap2}.get("언어지능").equals("1")) ? "우수": ($P{rankMap2}.get("언어지능").equals(String.valueOf($P{rankMap2}.size()-1)))? "부족" : "보통"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="466" y="170" width="47" height="50" uuid="90a952d9-57af-4ce7-8341-f5f0bd727c61"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{rankMap2}.get("언어지능").equals("0") || $P{rankMap2}.get("언어지능").equals("1")) ? "능동적": ($P{rankMap2}.get("언어지능").equals(String.valueOf($P{rankMap2}.size()-1)))? "소극적" : "조건적"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="220" width="68" height="50" uuid="13374e10-1acc-4abd-8ec3-950d2c6b8446"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{rankMap2}.get("논리수학지능").equals("0") || $P{rankMap2}.get("논리수학지능").equals("1")) ? "우수": ($P{rankMap2}.get("논리수학지능").equals(String.valueOf($P{rankMap2}.size()-1)))? "부족" : "보통"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="466" y="220" width="47" height="50" uuid="b8f48129-a768-4d8e-846b-c61011fd6018"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{rankMap2}.get("논리수학지능").equals("0") || $P{rankMap2}.get("논리수학지능").equals("1")) ? "능동적": ($P{rankMap2}.get("논리수학지능").equals(String.valueOf($P{rankMap2}.size()-1)))? "소극적" : "조건적"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="270" width="68" height="50" uuid="04cee336-a924-4fb3-9b1f-6e0fb4b15a91">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{rankMap2}.get("신체운동지능").equals("0") || $P{rankMap2}.get("신체운동지능").equals("1")) ? "우수": ($P{rankMap2}.get("신체운동지능").equals(String.valueOf($P{rankMap2}.size()-1)))? "부족" : "보통"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="466" y="270" width="47" height="50" uuid="7a192089-e871-44f4-ae23-b1f485a3f582"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{rankMap2}.get("신체운동지능").equals("0") || $P{rankMap2}.get("신체운동지능").equals("1")) ? "능동적": ($P{rankMap2}.get("신체운동지능").equals(String.valueOf($P{rankMap2}.size()-1)))? "소극적" : "조건적"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="320" width="68" height="50" uuid="bdec467e-f2b7-45cf-825e-d1feb28926b8"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{rankMap2}.get("공간지능").equals("0") || $P{rankMap2}.get("공간지능").equals("1")) ? "우수": ($P{rankMap2}.get("공간지능").equals(String.valueOf($P{rankMap2}.size()-1)))? "부족" : "보통"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="466" y="320" width="47" height="50" uuid="e14e0daf-283a-44d3-b5ca-788d4e383f30"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{rankMap2}.get("공간지능").equals("0") || $P{rankMap2}.get("공간지능").equals("1")) ? "능동적": ($P{rankMap2}.get("공간지능").equals(String.valueOf($P{rankMap2}.size()-1)))? "소극적" : "조건적"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="370" width="68" height="50" uuid="6d2cbab8-5d47-4083-b79f-ee3785ab3b5c"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{rankMap2}.get("음악지능").equals("0") || $P{rankMap2}.get("음악지능").equals("1")) ? "우수": ($P{rankMap2}.get("음악지능").equals(String.valueOf($P{rankMap2}.size()-1)))? "부족" : "보통"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="466" y="370" width="47" height="50" uuid="865bb203-48c4-40b5-b1ac-8fb817f38011"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{rankMap2}.get("음악지능").equals("0") || $P{rankMap2}.get("음악지능").equals("1")) ? "능동적": ($P{rankMap2}.get("음악지능").equals(String.valueOf($P{rankMap2}.size()-1)))? "소극적" : "조건적"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="420" width="68" height="50" uuid="87ea01dc-e284-4cc1-b11b-328e942ce60b">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{rankMap2}.get("자연관찰지능").equals("0") || $P{rankMap2}.get("자연관찰지능").equals("1")) ? "우수": ($P{rankMap2}.get("자연관찰지능").equals(String.valueOf($P{rankMap2}.size()-1)))? "부족" : "보통"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="466" y="420" width="47" height="50" uuid="df281b23-9dfb-4eb8-a525-d4760e3e6e11"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{rankMap2}.get("자연관찰지능").equals("0") || $P{rankMap2}.get("자연관찰지능").equals("1")) ? "능동적": ($P{rankMap2}.get("자연관찰지능").equals(String.valueOf($P{rankMap2}.size()-1)))? "소극적" : "조건적"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="470" width="68" height="50" uuid="b43b7d39-417f-42de-8f7d-27045fc23e78">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{rankMap2}.get("대인관계지능").equals("0") || $P{rankMap2}.get("대인관계지능").equals("1")) ? "우수": ($P{rankMap2}.get("대인관계지능").equals(String.valueOf($P{rankMap2}.size()-1)))? "부족" : "보통"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="466" y="470" width="47" height="50" uuid="6f47c0ad-7aff-45a6-bc75-64c3f6b8edcc"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{rankMap2}.get("대인관계지능").equals("0") || $P{rankMap2}.get("대인관계지능").equals("1")) ? "능동적": ($P{rankMap2}.get("대인관계지능").equals(String.valueOf($P{rankMap2}.size()-1)))? "소극적" : "조건적"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="520" width="68" height="50" uuid="ced1495d-0020-4b7b-a477-b263721aa286"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{rankMap2}.get("자기이해지능").equals("0") || $P{rankMap2}.get("자기이해지능").equals("1")) ? "우수": ($P{rankMap2}.get("자기이해지능").equals(String.valueOf($P{rankMap2}.size()-1)))? "부족" : "보통"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="466" y="520" width="47" height="50" uuid="fc25d3b1-a32c-4951-b22d-b364034fca66"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{rankMap2}.get("자기이해지능").equals("0") || $P{rankMap2}.get("자기이해지능").equals("1")) ? "능동적": ($P{rankMap2}.get("자기이해지능").equals(String.valueOf($P{rankMap2}.size()-1)))? "소극적" : "조건적"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="321" y="613" width="69" height="106" forecolor="#FFFFFF" backcolor="#FF9500" uuid="c177c060-f768-4e3f-87d5-97bd8c593a21"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[참여도]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="693" width="80" height="26" uuid="065cfc86-914e-4b31-aeb7-bc39455bc5be"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[훼방적]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="665" width="80" height="28" uuid="13c74680-4e00-420b-b35a-7a151e971adc">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[소극적]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="639" width="80" height="26" uuid="ce34ffad-a07b-4299-80c1-36fc038d1b7b">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[조건적]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="120" y="621" width="69" height="80" forecolor="#FFFFFF" backcolor="#FF9500" uuid="fbc27ddd-b14c-461d-9024-3ef9107227a8">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[발달 단계]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="621" width="80" height="26" uuid="f2192df5-f3e3-4722-96ba-b8bed430ef86"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[우수]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="673" width="80" height="28" uuid="383039ae-0ea7-41d7-bc2b-c876e84c2c50">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[부족]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="647" width="80" height="26" uuid="c20459a1-9ca9-485b-b2ae-b800b78b836d">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[보통]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="613" width="80" height="26" uuid="7ab0436b-b5dc-46b7-9af0-c41514a3e655"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim"/>
+				</textElement>
+				<text><![CDATA[능동적]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="742" width="576" height="30" uuid="ae205747-633d-4d30-bade-d65781ba2e24"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Copyright 2016. EduSMART Co.,Ltd. All Right Reserved. Institute of Creativity & Convergence for Latent Education]]></text>
+			</staticText>
+		</band>
+		<band height="413">
+			<staticText>
+				<reportElement mode="Opaque" x="63" y="130" width="450" height="50" forecolor="#00499C" backcolor="#96C9FF" uuid="0a670f33-3b73-4a14-954c-298eed2287c6"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[[강점 지능에 맞는 학습 유형 분석]]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="180" width="115" height="56" uuid="48a7ee99-144b-450c-bba6-89ee06ab797d"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<text><![CDATA[강점지능의 조합]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="178" y="180" width="166" height="56" uuid="bc953ac8-a506-4dc7-95f3-99d48cb749fc">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1유형 "+$P{rankMap}.get("0")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="344" y="180" width="169" height="56" uuid="1d8642fe-9f27-4673-890c-d8b45132c275">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["2유형 "+$P{rankMap}.get("1")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="63" y="236" width="115" height="56" uuid="ac5944ea-dd54-4720-b59c-c0ee4af83061"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<text><![CDATA[좋아하는 것]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="178" y="236" width="166" height="56" uuid="7e7f20d2-ccaa-4e97-9f95-e6e42b753a00">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{top1_score}.getFfavorite()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="344" y="236" width="169" height="56" uuid="0caafbe2-a009-40ac-a9b0-a99fa0b3f43d">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{top2_score}.getFfavorite()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="63" y="292" width="115" height="56" uuid="c31f2e3d-ccb6-4352-8edd-9fddebe6eeb2"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<text><![CDATA[잘하는 것]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="178" y="292" width="166" height="56" uuid="af3c8fed-cf97-496b-b26b-2c12fcf7fd3b">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{top1_score}.getFwell()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="344" y="292" width="169" height="56" uuid="caaf9497-4698-4bbb-a395-ec6ed221a275">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{top2_score}.getFwell()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="63" y="348" width="115" height="56" uuid="e18a3714-0b3e-475b-9ecd-b01a6a840230"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<text><![CDATA[적합한 학습법]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="178" y="348" width="166" height="56" uuid="1347b080-a6b5-4f4a-b6ef-38ea9d4b6139">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{top1_score}.getFleaning()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="344" y="348" width="169" height="56" uuid="bba2f45b-451b-4e99-bb70-8d2d9458710b">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{top2_score}.getFleaning()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="60" y="40" width="461" height="61" uuid="5dda41db-abbb-44f3-bcfe-0de632df57b1"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+		<band height="177">
+			<staticText>
+				<reportElement mode="Opaque" x="63" y="10" width="447" height="50" forecolor="#00499C" backcolor="#96C9FF" uuid="2ba25fd8-8b4e-45c3-95db-507cd55a8991">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[[강점 지능에 맞는 진로 방향성 분석]]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="60" width="115" height="56" uuid="297c7c2c-6776-4d51-b410-cc35bc41c230">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<text><![CDATA[특징 유형1]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="178" y="60" width="166" height="56" uuid="43f744c8-8fe6-463d-9a58-08d41957fd75">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{jun}.getFdowntype1()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="178" y="116" width="166" height="56" uuid="b388cacf-3bd8-4c10-97e8-853f2ca6d432">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{jun}.getFdowntype2()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="63" y="116" width="115" height="56" uuid="52474985-6d31-4dc1-99a4-7a8e06ede9f3">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<text><![CDATA[특징 유형2]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="344" y="60" width="166" height="56" uuid="c27ad0d8-5e35-409c-9f0e-e87036dfedd9">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{jun}.getFjob1()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="344" y="116" width="166" height="56" uuid="bfc3ba18-e4bd-4cdc-8c77-65316fda31c5">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{jun}.getFjob2()]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="165">
+			<printWhenExpression><![CDATA[!$P{jun}.getFresult().equals("")]]></printWhenExpression>
+			<staticText>
+				<reportElement mode="Opaque" x="63" y="6" width="96" height="154" forecolor="#FFFFFF" backcolor="#BFBFBF" uuid="2aebe850-ba21-4a15-b6b3-e02c44398773"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" isBold="true"/>
+				</textElement>
+				<text><![CDATA[종합 소견]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="6" width="355" height="154" uuid="cccb0d9a-a473-43dd-b28d-eb75c3680b53"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="gulim" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{jun}.getFresult()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

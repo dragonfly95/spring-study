@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="main" pageWidth="595" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="575" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="200607fe-90b0-4593-b70d-3336bd746056">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="PATH" class="java.lang.String"/>
+	<parameter name="DateUtil" class="ubs.framework.util.DateUtil">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="StringUtil" class="ubs.framework.util.StringUtil"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="chk4List1" class="java.util.List"/>
+	<field name="chk4List2" class="java.util.List"/>
+	<field name="jun" class="ubs.shop.domain.Result"/>
+	<field name="rankMap" class="java.util.HashMap"/>
+	<field name="rankMap2" class="java.util.HashMap"/>
+	<field name="scoreMap1" class="java.util.HashMap"/>
+	<field name="scoreMap2" class="java.util.HashMap"/>
+	<field name="top1_score" class="ubs.shop.domain.ScoreDetail">
+		<fieldDescription><![CDATA[top1_score]]></fieldDescription>
+	</field>
+	<field name="top2_score" class="ubs.shop.domain.ScoreDetail">
+		<fieldDescription><![CDATA[top2_score]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="821">
+			<textField>
+				<reportElement x="40" y="680" width="80" height="30" uuid="8cb75fac-a55b-472b-9f2b-907e79bb1ae0"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jun}.getFchildnm()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="40" y="650" width="80" height="30" forecolor="#000000" backcolor="rgba(253, 255, 133, 0.5019608)" uuid="2e0e4bfa-841d-43e9-9959-9098111d2caa"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[아동이름]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="680" width="80" height="30" uuid="9e20d7e9-a318-476f-a854-4657d7ebdef9"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jun}.getFbirth()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="120" y="650" width="80" height="30" forecolor="#000000" backcolor="rgba(253, 255, 133, 0.5019608)" uuid="7168a02f-8c91-4b0b-beb6-191242b34998">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[생년월일]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="680" width="80" height="30" uuid="359199f6-c89b-40c6-9303-21da126aeecb"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jun}.getFgender().equals("3")?"남":"여"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="200" y="650" width="80" height="30" forecolor="#000000" backcolor="rgba(253, 255, 133, 0.5019608)" uuid="142448fa-b701-4d67-952f-f2c7716adc91">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[성별]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="360" y="680" width="80" height="30" uuid="df391c92-4f1c-4713-80f8-36100c7c3ec1"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jun}.getFbannm()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="360" y="650" width="80" height="30" forecolor="#000000" backcolor="rgba(253, 255, 133, 0.5019608)" uuid="7fa9db6b-ca86-417d-9b20-a77b2eb7cb4e"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[반]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="440" y="650" width="121" height="30" forecolor="#000000" backcolor="rgba(253, 255, 133, 0.5019608)" uuid="19cc1dd8-f2b2-474c-8e5f-5c586f263d98"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[검사일]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="440" y="680" width="121" height="30" uuid="8d03505c-18a7-4258-a05e-2b8d18d31f5c"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DateUtil}.getDate( $F{jun}.getFdtfm(), "yyyy.MM.dd" ) + "~" + $P{DateUtil}.getDate( $F{jun}.getFdtto(), "yyyy.MM.dd" )]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement x="0" y="800" width="97" height="1" uuid="970df892-7aad-41b9-a597-2667cae117a2"/>
+			</break>
+			<staticText>
+				<reportElement x="0" y="760" width="576" height="30" uuid="09078c46-f892-4371-8617-0e36549b2f91"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Copyright 2016. EduSMART Co.,Ltd. All Right Reserved. Institute of Creativity & Convergence for Latent Education]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="280" y="650" width="80" height="30" forecolor="#000000" backcolor="rgba(253, 255, 133, 0.5019608)" uuid="91c04c5a-ef4b-4a24-a4e4-25ec5554f825"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[월령]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="280" y="680" width="80" height="30" uuid="a21a7a58-e531-4fe7-a217-99b901d9057b"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="gulim" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jun}.getFage()]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement stretchType="RelativeToTallestObject" x="11" y="24" width="550" height="590" uuid="33a14bce-c3db-4d7d-9667-f37725b87d3c">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA["http://ttokttokgenie.com/files/testview/2017/01/13/20170113213636_73369_jvuk.jpg"]]></imageExpression>
+			</image>
+		</band>
+		<band height="821">
+			<break>
+				<reportElement x="0" y="810" width="100" height="1" uuid="e06aae2b-4af8-440b-8d90-e265a0cb75ef"/>
+			</break>
+			<staticText>
+				<reportElement x="0" y="769" width="576" height="30" uuid="c087c64c-399c-4efc-a6e6-0a50b7546ee4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Copyright 2016. EduSMART Co.,Ltd. All Right Reserved. Institute of Creativity & Convergence for Latent Education]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement stretchType="RelativeToTallestObject" x="11" y="24" width="550" height="590" uuid="ea2d7c30-9105-48ce-b9e3-5702902eaf61">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA["http://ttokttokgenie.com/files/testview/2017/01/13/20170113222816_198825_gqnj.jpg"]]></imageExpression>
+			</image>
+		</band>
+		<band height="821">
+			<break>
+				<reportElement x="0" y="810" width="99" height="1" uuid="3d79757a-686b-441d-aebd-31f525325ec4"/>
+			</break>
+			<staticText>
+				<reportElement x="0" y="770" width="576" height="30" uuid="351b6d17-0e39-406d-87b5-8f2346996756"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Copyright 2016. EduSMART Co.,Ltd. All Right Reserved. Institute of Creativity & Convergence for Latent Education]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement stretchType="RelativeToTallestObject" x="11" y="24" width="550" height="590" uuid="37d4e7bd-1cc6-41b0-b2dc-62e561427989">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<graphicElement fill="Solid"/>
+				<imageExpression><![CDATA["http://ttokttokgenie.com/files/testview/2017/01/13/20170113222829_130772_nuqm.jpg"]]></imageExpression>
+			</image>
+		</band>
+		<band height="332">
+			<subreport>
+				<reportElement x="0" y="0" width="576" height="320" uuid="ecaab17c-2c1d-4bee-86d9-0ccf313a6a69">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<subreportParameter name="chk4List1">
+					<subreportParameterExpression><![CDATA[$F{chk4List1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="jun">
+					<subreportParameterExpression><![CDATA[$F{jun}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="scoreMap1">
+					<subreportParameterExpression><![CDATA[$F{scoreMap1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="rankMap">
+					<subreportParameterExpression><![CDATA[$F{rankMap}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{PATH}+"/jsp/shop/report/jrxml/potential_observe_sub1.jasper"]]></subreportExpression>
+			</subreport>
+			<break>
+				<reportElement x="0" y="330" width="100" height="1" uuid="a519b748-aab1-4964-af70-6a9e72cc87c9"/>
+			</break>
+		</band>
+		<band height="328">
+			<subreport>
+				<reportElement x="0" y="0" width="576" height="320" uuid="7e026997-26f5-4fdf-82ed-900f69099892">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<subreportParameter name="chk4List2">
+					<subreportParameterExpression><![CDATA[$F{chk4List2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="jun">
+					<subreportParameterExpression><![CDATA[$F{jun}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="scoreMap2">
+					<subreportParameterExpression><![CDATA[$F{scoreMap2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{PATH}+"/jsp/shop/report/jrxml/potential_observe_sub2.jasper"]]></subreportExpression>
+			</subreport>
+			<break>
+				<reportElement x="0" y="325" width="100" height="1" uuid="dd6777a8-4539-4c9e-a203-0fe6e9711bec"/>
+			</break>
+		</band>
+		<band height="320">
+			<subreport>
+				<reportElement x="0" y="0" width="576" height="320" uuid="127bf812-3c58-4bef-8beb-939ac315c4d6">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<subreportParameter name="jun">
+					<subreportParameterExpression><![CDATA[$F{jun}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{PATH}+"/jsp/shop/report/jrxml/potential_observe_sub3.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="320">
+			<subreport>
+				<reportElement x="0" y="0" width="576" height="320" uuid="820e7dbf-b9ac-41dc-a047-188abf615989">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<subreportParameter name="jun">
+					<subreportParameterExpression><![CDATA[$F{jun}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="rankMap2">
+					<subreportParameterExpression><![CDATA[$F{rankMap2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="rankMap">
+					<subreportParameterExpression><![CDATA[$F{rankMap}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="top1_score">
+					<subreportParameterExpression><![CDATA[$F{top1_score}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="top2_score">
+					<subreportParameterExpression><![CDATA[$F{top2_score}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{PATH}+"/jsp/shop/report/jrxml/potential_observe_sub4.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>
