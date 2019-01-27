@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+          PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+          "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tistory.pentode.service.dao.ChagyebuDAO">
+
+	<select id="selectChagyebuList" resultType="chagyebuVO">
+		SELECT * FROM (
+		  SELECT ROWNUM AS RNUM, B.* FROM (
+		    SELECT *
+		      FROM TB_CHAGYEBU A
+		     WHERE 1 = 1 
+		       <if test="type != null and type != ''">
+               AND TYPE = #{type}
+               </if>
+               <if test="complete != null and complete != ''">
+               AND COMPLETE = #{complete}
+               </if>
+		     ORDER BY NUM DESC
+		  ) B
+		) WHERE RNUM BETWEEN #{first} AND #{last}
+	</select>
+	
+    <select id="selectChagyebuTotal" resultType="int">
+        SELECT COUNT(*) AS CNT
+          FROM TB_CHAGYEBU
+         WHERE 1 = 1
+           <if test="type != null and type != ''">
+           AND TYPE = #{type}
+           </if>
+           <if test="complete != null and complete != ''">
+           AND COMPLETE = #{complete}
+           </if>
+    </select>
+
+</mapper>
